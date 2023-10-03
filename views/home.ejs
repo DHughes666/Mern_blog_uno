@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%= homeCont %></p>
+
+  <% blogItems.forEach((posty, i) => { %>
+    <h1><%= posty.title %></h1>
+    <h6>Posted by: <%= posty.author %> | <%= posty.date %> </h6>
+    <p><%= posty.subtitle.substring(0, 100) + " ..." %>
+      <a href="/posts/<%= posty.title %>">Read more</a>
+    </p>
+  <% }); %>
+
+
+
+<%- include("partials/footer") -%>
